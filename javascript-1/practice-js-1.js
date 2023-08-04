@@ -32,9 +32,9 @@ function sum(num1, num2) {
 */
 
 function trueOrFalse(data) {
-  if (data === false) {
-    return false
-  } return true
+  if (Boolean(data)) {
+    return true
+  } else return false
 }
 
 //////////////////PROBLEM 6////////////////////
@@ -120,16 +120,12 @@ let me = {
 
 
 function bigOrSmall(arr) {
-  let answers = [];
-  for (i of arr) {
+  let answers = []
+  for (i = 0; i <= arr.length - 1; i++) {
     if (arr[i] > 100) {
       answers.push('big')
-    } else {
-      if (arr[i] <= 100) {
-        answers.push('small')
-      }
-    }
-  } console.log(answers)
+    } else answers.push('small')
+  } return answers
 }
 
 //////////////////PROBLEM 13////////////////////
@@ -235,7 +231,7 @@ function giveMeDoubles(arr, cb) {
     - else, add a key to the object called isNew and set it to false
       - hint: you can use dot notation or bracket notation
   Last, the function should return the object
-
+ 
   For example,
     carFactory('toyota', 'camry', 2020)
   should return an object that looks like this:
